@@ -2,14 +2,16 @@ package com.example.e450c.bosszhiping.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.view.ViewGroup;
 
 import java.util.List;
 
 /**
  * Created by e450c on 2016/10/24.
  */
-public class MainAdapter extends FragmentStatePagerAdapter {
+public class MainAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> fragmentList;
 
@@ -31,8 +33,14 @@ public class MainAdapter extends FragmentStatePagerAdapter {
         return fragmentList.size();
     }
 
+//    @Override
+//    public CharSequence getPageTitle(int position) {
+//        return tablists.get(position);
+//    }
+
+
     @Override
-    public CharSequence getPageTitle(int position) {
-        return tablists.get(position);
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        super.destroyItem(container, position, object);
     }
 }

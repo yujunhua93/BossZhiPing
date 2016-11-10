@@ -4,10 +4,106 @@
     android:layout_height="match_parent"
     tools:context="com.example.e450c.bosszhiping.fragment.UserFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dip"
+                android:background="@mipmap/bg_f3_head">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3">
+
+                    <com.example.e450c.bosszhiping.widget.RoundImageView
+                        android:id="@+id/userHeaderIv"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:src="@mipmap/avatar_15"
+                        android:layout_margin="10dip"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@mipmap/ic_user_info_edit"
+
+                            android:text="姓名"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="编写简历 100%"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="在职-考虑机会"/>
+                     </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:layout_gravity="center"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="509"/>
+                        <ImageView
+                            android:layout_width="10dip"
+                            android:layout_height="10dip"
+                            android:src="@mipmap/ic_dollar"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+            
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="50dip"
+        >
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip" />
+
+
+
+    </RelativeLayout>
 
 </FrameLayout>

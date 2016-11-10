@@ -1,13 +1,35 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.e450c.bosszhiping.fragment.CompanyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/CompanyTitle_rl"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="50dip"
+        android:background="@color/maingreen">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公司"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+         android:id="@+id/company_srfl"
+         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/CompanyTitle_rl">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/company_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
